@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="gsK9cU" name="white-noice-generator" displaySplashScreen="1"
+              reportAppUsage="1" splashScreenColour="Dark" projectType="guiapp"
+              version="1.0.0" bundleIdentifier="com.yourcompany.whitenoicegenerator"
+              includeBinaryInAppConfig="1" cppLanguageStandard="11" companyCopyright=""
+              jucerVersion="5.2.0">
+  <MAINGROUP id="lru1rF" name="white-noice-generator">
+    <GROUP id="{811A00C0-DC0A-7A7B-7B3A-37C61D844D53}" name="Source">
+      <FILE id="WfGqDQ" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="ir8KYm" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" enablePluginBinaryCopyStep="1" isDebug="1" optimisation="1"
+                       linkTimeOptimisation="0" targetName="white-noice-generator"/>
+        <CONFIGURATION name="Release" enablePluginBinaryCopyStep="1" isDebug="0" optimisation="3"
+                       linkTimeOptimisation="1" targetName="white-noice-generator"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <ANDROIDSTUDIO targetFolder="Builds/Android">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" androidArchitectures="" isDebug="1" optimisation="1"
+                       linkTimeOptimisation="0" targetName="white-noice-generator"/>
+        <CONFIGURATION name="Release" androidArchitectures="" isDebug="0" optimisation="3"
+                       linkTimeOptimisation="1" targetName="white-noice-generator"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+    <CLION targetFolder="Builds/CLion">
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
+      </MODULEPATHS>
+    </CLION>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>

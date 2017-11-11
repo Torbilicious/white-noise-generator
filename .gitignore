@@ -1,0 +1,9 @@
+.idea/
+*.iml
+
+cmake-build-debug/
+
+Builds/Android/
+Builds/MacOSX/
+
+
