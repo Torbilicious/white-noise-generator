@@ -9,3 +9,8 @@
 */
 
 #include "PlaybackTypeChoice.h"
+
+PlaybackTypeChoice::PlaybackTypeChoice() {
+    Logger::writeToLog("Created!");
+
+}

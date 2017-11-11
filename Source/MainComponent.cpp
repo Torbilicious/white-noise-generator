@@ -1,12 +1,13 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PlaybackType.h"
+#include "PlaybackTypeChoice.h"
 
 
 class MainContentComponent : public AudioAppComponent, SliderListener, ButtonListener {
 public:
     MainContentComponent() {
         //GUI setup
-        setSize(500, 100);
+        setSize(500, 150);
 
         addAndMakeVisible(volumeSlider);
         volumeSlider.setRange(0, 100.0);
@@ -20,9 +21,12 @@ public:
         volumeLabel.attachToComponent(&volumeSlider, true);
 
         addAndMakeVisible(whiteNoiceToggle);
-        whiteNoiceToggle.setToggleState(playAudio, sendNotification);
+        whiteNoiceToggle.setToggleState(playbackType != OFF, sendNotification);
         whiteNoiceToggle.setButtonText("Audio enabled");
         whiteNoiceToggle.addListener(this);
+
+        addAndMakeVisible(playbackChoicesBox);
+        playbackChoicesBox.setModel(&playbackChoicesModel);
 
 
         //Audio setup
@@ -63,9 +67,10 @@ public:
     }
 
     void resized() override {
-        const int spacingLeft = 120;
+        const int spacingLeft = 100;
         volumeSlider.setBounds(spacingLeft, 25, getWidth() - spacingLeft - 10, 20);
         whiteNoiceToggle.setBounds(spacingLeft, 50, getWidth() - spacingLeft - 10, 20);
+        playbackChoicesBox.setBounds(spacingLeft, 75, getWidth() - spacingLeft -10, 50);
     }
 
 
@@ -90,12 +95,13 @@ private:
 
     PlaybackType playbackType = OFF;
 
-    Boolean playAudio = false;
-
     Slider volumeSlider;
     Label volumeLabel;
 
     ToggleButton whiteNoiceToggle;
+
+    ListBox playbackChoicesBox;
+    PlaybackTypeChoice playbackChoicesModel;
 
 
     void applyRandomNoise(const AudioSourceChannelInfo &bufferToFill) {
