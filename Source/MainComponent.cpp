@@ -70,7 +70,7 @@ public:
         const int spacingLeft = 100;
         volumeSlider.setBounds(spacingLeft, 25, getWidth() - spacingLeft - 10, 20);
         whiteNoiceToggle.setBounds(spacingLeft, 50, getWidth() - spacingLeft - 10, 20);
-        playbackChoicesBox.setBounds(spacingLeft, 75, getWidth() - spacingLeft -10, 50);
+        playbackChoicesBox.setBounds(spacingLeft, 75, getWidth() - spacingLeft - 10, 50);
     }
 
 
