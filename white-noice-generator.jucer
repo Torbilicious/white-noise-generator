@@ -7,6 +7,13 @@
               jucerVersion="5.2.0">
   <MAINGROUP id="lru1rF" name="white-noice-generator">
     <GROUP id="{811A00C0-DC0A-7A7B-7B3A-37C61D844D53}" name="Source">
+      <GROUP id="{13C42A89-F11E-ED75-F9C5-C0A219A1CEEF}" name="PlaybackType">
+        <FILE id="uLsxDr" name="PlaybackType.h" compile="1" resource="0" file="Source/PlaybackType.h"/>
+        <FILE id="MnD0eU" name="PlaybackTypeChoice.cpp" compile="1" resource="0"
+              file="Source/PlaybackTypeChoice.cpp"/>
+        <FILE id="l3B1om" name="PlaybackTypeChoice.h" compile="0" resource="0"
+              file="Source/PlaybackTypeChoice.h"/>
+      </GROUP>
       <FILE id="WfGqDQ" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="ir8KYm" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
@@ -55,6 +62,32 @@
         <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
       </MODULEPATHS>
     </CLION>
+    <VS2017 targetFolder="Builds/VisualStudio2017" windowsTargetPlatformVersion="10.0.16299.0">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="0" isDebug="1" optimisation="1" targetName="white-noice-generator"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1" isDebug="0" optimisation="3" targetName="white-noice-generator"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Users/tbinder/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2017>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
