@@ -1,4 +1,5 @@
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "PlaybackType.h"
 
 
 class MainContentComponent : public AudioAppComponent, SliderListener, ButtonListener {
@@ -10,7 +11,7 @@ public:
         addAndMakeVisible(volumeSlider);
         volumeSlider.setRange(0, 100.0);
         volumeSlider.setTextValueSuffix(" %");
-        volumeSlider.setValue(80.0);
+        volumeSlider.setValue(50.0);
         volumeSlider.setTextBoxStyle(Slider::TextBoxLeft, false, 160, volumeSlider.getTextBoxHeight());
         volumeSlider.addListener(this);
 
@@ -18,10 +19,10 @@ public:
         volumeLabel.setText("Volume", dontSendNotification);
         volumeLabel.attachToComponent(&volumeSlider, true);
 
-        addAndMakeVisible(playAudioButton);
-        playAudioButton.setToggleState(playAudio, sendNotification);
-        playAudioButton.setButtonText("Audio enabled");
-        playAudioButton.addListener(this);
+        addAndMakeVisible(whiteNoiceToggle);
+        whiteNoiceToggle.setToggleState(playAudio, sendNotification);
+        whiteNoiceToggle.setButtonText("Audio enabled");
+        whiteNoiceToggle.addListener(this);
 
 
         //Audio setup
@@ -32,6 +33,7 @@ public:
         shutdownAudio();
     }
 
+    //Audio
     void prepareToPlay(int samplesPerBlockExpected, double sampleRate) override {
         String message;
         message << "Preparing to play audio..." << newLine;
@@ -41,17 +43,21 @@ public:
     }
 
     void getNextAudioBlock(const AudioSourceChannelInfo &bufferToFill) override {
-        if (playAudio) {
-            applyRandomNoise(bufferToFill);
-        } else {
-            bufferToFill.clearActiveBufferRegion();
+        switch (playbackType) {
+            case WIHTE_NOISE:
+                applyRandomNoise(bufferToFill);
+                break;
+            case OFF:
+            default:
+                bufferToFill.clearActiveBufferRegion();
         }
     }
-
 
     void releaseResources() override {
     }
 
+
+    //GUI
     void paint(Graphics &g) override {
         g.fillAll(getLookAndFeel().findColour(ResizableWindow::backgroundColourId));
     }
@@ -59,9 +65,11 @@ public:
     void resized() override {
         const int spacingLeft = 120;
         volumeSlider.setBounds(spacingLeft, 25, getWidth() - spacingLeft - 10, 20);
-        playAudioButton.setBounds(spacingLeft, 50, getWidth() - spacingLeft - 10, 20);
+        whiteNoiceToggle.setBounds(spacingLeft, 50, getWidth() - spacingLeft - 10, 20);
     }
 
+
+    //Controls
     void sliderValueChanged(Slider *slider) override {
 //        if (slider == &volumeSlider)
 //            volumeSlider.setValue(1.0 / volumeSlider.getValue(), dontSendNotification);
@@ -69,25 +77,25 @@ public:
 //            frequencySlider.setValue(1.0 / durationSlider.getValue(), dontSendNotification);
     }
 
-//    void buttonStateChanged(Button *button) override {
-//        Listener::buttonStateChanged(button);
-//
-//        playAudio = button->getToggleState();
-//    }
-
     void buttonClicked(Button *button) override {
-        playAudio = button->getToggleState();
+//        playAudio = button->getToggleState();
+
+        if (button == &whiteNoiceToggle) {
+            playbackType = button->getToggleState() ? WIHTE_NOISE : OFF;
+        }
     }
 
 
 private:
+
+    PlaybackType playbackType = OFF;
 
     Boolean playAudio = false;
 
     Slider volumeSlider;
     Label volumeLabel;
 
-    ToggleButton playAudioButton;
+    ToggleButton whiteNoiceToggle;
 
 
     void applyRandomNoise(const AudioSourceChannelInfo &bufferToFill) {

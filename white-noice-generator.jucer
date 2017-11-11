@@ -37,30 +37,6 @@
         <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <ANDROIDSTUDIO targetFolder="Builds/Android">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" androidArchitectures="" isDebug="1" optimisation="1"
-                       linkTimeOptimisation="0" targetName="white-noice-generator"/>
-        <CONFIGURATION name="Release" androidArchitectures="" isDebug="0" optimisation="3"
-                       linkTimeOptimisation="1" targetName="white-noice-generator"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_video" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../../../../Users/tbinder/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../../../../Users/tbinder/JUCE/modules"/>
-      </MODULEPATHS>
-    </ANDROIDSTUDIO>
     <CLION targetFolder="Builds/CLion">
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../../../Users/tbinder/JUCE/modules"/>
